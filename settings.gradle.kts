@@ -15,4 +15,6 @@ dependencyResolutionManagement {
 
 rootProject.name = "funProject"
 include(":app")
- 
+include(":feature")
+include(":feature:home")
+include(":feature:home:ui")
