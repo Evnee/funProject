@@ -1,0 +1,35 @@
+[versions]
+appcompat = "1.6.1"
+core-ktx = "1.12.0"
+fragment-ktx = "1.6.2"
+lifecycleRuntimeKtx = "2.6.2"
+ui-android = "1.5.4"
+composeBom = "2023.10.01"
+coil = "2.4.0"
+activity = "1.8.2"
+hilt = "2.49"
+
+
+[libraries]
+androidx-appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
+androidx-core-ktx = { module = "androidx.core:core-ktx", version.ref = "core-ktx" }
+androidx-fragment-ktx = { module = "androidx.fragment:fragment-ktx", version.ref = "fragment-ktx" }
+androidx-lifecycle-runtime-ktx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
+androidx-ui-android = { module = "androidx.compose.ui:ui-android", version.ref = "ui-android" }
+coil_compose = { module = "io.coil-kt:coil-compose", version.ref = "coil" }
+compose_bom = { module = "androidx.compose:compose-bom", version.ref = "composeBom" }
+compose_ui = { module = "androidx.compose.ui:ui" }
+compose_util = { module = "androidx.compose.ui:ui-util" }
+compose_material3 = { module = "androidx.compose.material3:material3" }
+compose_material3_window_size = { module = "androidx.compose.material3:material3-window-size-class" }
+compose_preview = { module = "androidx.compose.ui:ui-tooling-preview" }
+compose_tooling = { module = "androidx.compose.ui:ui-tooling" }
+compose_animation = { module = "androidx.compose.animation:animation" }
+compose_animation_graphics = { module = "androidx.compose.animation:animation-graphics" }
+compose_test_manifest = { module = "androidx.compose.ui:ui-test-manifest" }
+compose_activity = { module = "androidx.activity:activity-compose", version.ref = "activity" }
+hilt_lib = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
+hilt_android_compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hilt" }
+
+
+[bundles]
