@@ -1,4 +1,4 @@
-package ru.evneeinc.funProject.ui.theme
+package ru.evneeinc.theme
 
 import androidx.compose.ui.graphics.Color
 
