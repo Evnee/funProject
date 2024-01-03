@@ -55,6 +55,8 @@ dependencies {
     implementation(platform(libs.compose.bom))
     implementation(libs.androidx.fragment.ktx)
     implementation(libs.androidx.appcompat)
+
     implementation(project(":feature:home:ui"))
+    implementation(project(":navigation"))
     implementation(project(":theme"))
 }

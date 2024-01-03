@@ -8,6 +8,13 @@ composeBom = "2023.10.01"
 coil = "2.4.0"
 activity = "1.8.2"
 hilt = "2.49"
+agp = "8.2.0"
+kotlin = "1.9.0"
+junit = "4.13.2"
+cicerone = "7.1"
+androidx-test-ext-junit = "1.1.5"
+espresso-core = "3.5.1"
+material = "1.11.0"
 
 
 [libraries]
@@ -30,6 +37,14 @@ compose_test_manifest = { module = "androidx.compose.ui:ui-test-manifest" }
 compose_activity = { module = "androidx.activity:activity-compose", version.ref = "activity" }
 hilt_lib = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
 hilt_android_compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hilt" }
+ui_cicerone = { module = "com.github.terrakok:cicerone", version.ref = "cicerone" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-test-ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidx-test-ext-junit" }
+espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espresso-core" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 
 
 [bundles]
+[plugins]
+androidLibrary = { id = "com.android.library", version.ref = "agp" }
+kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
