@@ -1,10 +1,12 @@
 plugins {
-    id("com.android.library")
-    id("org.jetbrains.kotlin.android")
+    alias(libs.plugins.androidLibrary)
+    alias(libs.plugins.kotlinAndroid)
+    kotlin("kapt")
+    id("com.google.dagger.hilt.android")
 }
 
 android {
-    namespace = "ru.evneeinc.theme"
+    namespace = "ru.evneeinc.navigation"
     compileSdk = 34
 
     defaultConfig {
@@ -23,12 +25,6 @@ android {
             )
         }
     }
-    buildFeatures {
-        compose = true
-    }
-    composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.0"
-    }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
@@ -41,18 +37,8 @@ android {
 dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
-    implementation(libs.androidx.ui.android)
     implementation(libs.androidx.fragment.ktx)
-    api(platform(libs.compose.bom))
-    api(libs.compose.ui)
-    api(libs.compose.material3)
-    api(libs.compose.activity)
-    api(libs.compose.animation)
-    api(libs.compose.tooling)
-    api(libs.compose.util)
-    api(libs.compose.material3.window.size)
-    api(libs.compose.preview)
-    api(libs.compose.animation.graphics)
-    api(libs.compose.test.manifest)
-    implementation(libs.coil.compose)
+    implementation(libs.ui.cicerone)
+    implementation(libs.hilt.lib)
+    kapt(libs.hilt.android.compiler)
 }
