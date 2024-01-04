@@ -10,8 +10,11 @@ import ru.evneeinc.navigation.commands.OpenDialog
 import ru.evneeinc.navigation.commands.Replace
 import ru.evneeinc.navigation.type.NavigationDialog
 import ru.evneeinc.navigation.type.NavigationScreen
+import javax.inject.Inject
+import javax.inject.Singleton
 
-class CustomRouterImpl : BaseRouter(), CustomRouter {
+@Singleton
+internal class CustomRouterImpl @Inject constructor() : BaseRouter(), CustomRouter {
     override fun navigateTo(screen: NavigationScreen, data: Bundle?) {
         executeCommands(Forward(screen, data))
     }

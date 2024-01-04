@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.Text
@@ -18,8 +17,7 @@ import androidx.compose.ui.unit.sp
 import androidx.fragment.app.Fragment
 import ru.evneeinc.theme.FunTheme
 
-class HomeFragment : Fragment() {
-
+class TestFragment : Fragment(){
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -31,8 +29,8 @@ class HomeFragment : Fragment() {
                 FunTheme {
                     Box(modifier = Modifier.fillMaxSize().background(Color.White)) {
                         Text(
-                            modifier = Modifier.align(Alignment.Center).clickable {  },
-                            text = "Home screen",
+                            modifier = Modifier.align(Alignment.Center),
+                            text = "TestScreen",
                             fontSize = 30.sp,
                         )
                     }

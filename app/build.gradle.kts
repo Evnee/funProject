@@ -1,6 +1,9 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    kotlin("kapt")
+    id("com.google.dagger.hilt.android")
+
 }
 
 android {
@@ -55,7 +58,9 @@ dependencies {
     implementation(platform(libs.compose.bom))
     implementation(libs.androidx.fragment.ktx)
     implementation(libs.androidx.appcompat)
-
+    implementation(libs.hilt.lib)
+    implementation(libs.ui.cicerone)
+    kapt(libs.hilt.android.compiler)
     implementation(project(":feature:home:ui"))
     implementation(project(":navigation"))
     implementation(project(":theme"))

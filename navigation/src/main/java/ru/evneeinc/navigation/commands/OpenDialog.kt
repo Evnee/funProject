@@ -6,5 +6,5 @@ import ru.evneeinc.navigation.type.NavigationDialog
 
 internal data class OpenDialog(
     val screen: NavigationDialog,
-    val bundle: Bundle? = null
+    val bundle: Bundle? = null,
 ) : Command
