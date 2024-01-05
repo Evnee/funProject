@@ -51,10 +51,6 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
     override fun onCreate(savedInstanceState: Bundle?) {
         initNavigation()
         super.onCreate(savedInstanceState)
-    }
-
-    override fun onStart() {
-        super.onStart()
         router.navigateTo(FragmentType.HOME)
     }
 }
