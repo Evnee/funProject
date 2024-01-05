@@ -11,7 +11,7 @@ dependencies {
 gradlePlugin{
     plugins {
         register("AndroidApplicationPlugin") {
-            id = "ru.evneeinc.funProject.AndroidApplicationPlugin"
+            id = "evneeinc.AndroidApplicationPlugin"
             implementationClass = "AndroidApplicationPlugin"
         }
     }
