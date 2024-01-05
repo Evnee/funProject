@@ -8,13 +8,15 @@ composeBom = "2023.10.01"
 coil = "2.4.0"
 activity = "1.8.2"
 hilt = "2.49"
-agp = "8.2.0"
+agp = "8.2.1"
 kotlin = "1.9.0"
 junit = "4.13.2"
 cicerone = "7.1"
 androidx-test-ext-junit = "1.1.5"
 espresso-core = "3.5.1"
 material = "1.11.0"
+kotlinx_serialization = "1.6.2"
+androidGradlePlugin = "8.2.1"
 
 
 [libraries]
@@ -35,6 +37,7 @@ compose_animation = { module = "androidx.compose.animation:animation" }
 compose_animation_graphics = { module = "androidx.compose.animation:animation-graphics" }
 compose_test_manifest = { module = "androidx.compose.ui:ui-test-manifest" }
 compose_activity = { module = "androidx.activity:activity-compose", version.ref = "activity" }
+kotlinx_serialization = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinx_serialization" }
 hilt_lib = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
 hilt_android_compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hilt" }
 ui_cicerone = { module = "com.github.terrakok:cicerone", version.ref = "cicerone" }
@@ -42,9 +45,13 @@ junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-test-ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidx-test-ext-junit" }
 espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espresso-core" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+kotlin-gradlePlugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
+android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "androidGradlePlugin" }
 
 
 [bundles]
+
 [plugins]
 androidLibrary = { id = "com.android.library", version.ref = "agp" }
 kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+org-jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
