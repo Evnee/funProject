@@ -63,4 +63,5 @@ dependencies {
     implementation(project(":feature:home:ui"))
     implementation(project(":navigation"))
     implementation(project(":theme"))
+    implementation(project(":core:feature"))
 }
