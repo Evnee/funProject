@@ -1,5 +1,6 @@
 plugins {
     `kotlin-dsl`
+    `java-gradle-plugin`
 }
 group = "ru.evneeinc.funProject.buildLogic"
 
