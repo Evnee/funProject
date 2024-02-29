@@ -1,6 +1,7 @@
 package ru.evneeinc.navigation
 
 import android.os.Bundle
+import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.FragmentManager
@@ -48,6 +49,18 @@ abstract class CustomNavigator(
     }
 
     private fun openDialog(command: OpenDialog) {
+        val fragment = createDialog(command.screen, command.bundle)
+        val fragmentTransaction = fragmentManager.beginTransaction()
+        fragment.show(fragmentTransaction, command.screen.name)
+    }
+
+    private fun createDialog(screen: NavigationElement, data: Bundle? = null): DialogFragment {
+        val fragment = createFragment(screen, data)
+
+        if (fragment !is DialogFragment) {
+            throw RuntimeException("Can't create a screen: $screen")
+        }
+        return fragment
     }
 
     private fun fragmentBack(command: Back) {

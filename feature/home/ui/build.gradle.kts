@@ -45,6 +45,7 @@ dependencies {
     implementation(libs.androidx.appcompat)
     implementation(libs.androidx.fragment.ktx)
     implementation(libs.hilt.lib)
+    implementation(libs.material)
     implementation(project(":core:feature"))
     kapt(libs.hilt.android.compiler)
     implementation(project(":theme"))

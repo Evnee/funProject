@@ -17,9 +17,13 @@ espresso-core = "3.5.1"
 material = "1.11.0"
 kotlinx_serialization = "1.6.2"
 androidGradlePlugin = "8.2.1"
+android_material = "1.10.0"
+
 
 
 [libraries]
+material = { module = "com.google.android.material:material", version.ref = "android_material" }
+
 androidx-appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
 androidx-core-ktx = { module = "androidx.core:core-ktx", version.ref = "core-ktx" }
 androidx-fragment-ktx = { module = "androidx.fragment:fragment-ktx", version.ref = "fragment-ktx" }
@@ -44,7 +48,6 @@ ui_cicerone = { module = "com.github.terrakok:cicerone", version.ref = "cicerone
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-test-ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidx-test-ext-junit" }
 espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espresso-core" }
-material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 kotlin-gradlePlugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
 android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "androidGradlePlugin" }
 
